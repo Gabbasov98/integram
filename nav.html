@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Главная</title>
+</head>
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body class="m-page">
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+
+
+
+
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#quickOrder">
+            Быстрый заказ
+        </button>
+
+
+        <code>
+
+            @@include
+            ('components/page-blocks/_filter-slider.html',{ <br>
+            "start1":"0", <br>
+            "start2":"30000", <br>
+            "min":"1000", <br>
+            "max":"100000", <br>
+            })
+
+        </code>
+    </div>
+
+
+
+
+
+
+
+
+    <!--  -->
+    <div class="modal" id="reqModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="modal__title text36 medium-text text-center">
+                Укажите ваши актуальные данные, и мы свяжемся с вами в течение 15 минут
+            </div>
+            <form action="" class="modal-form _req-form">
+                <div class="modal-form__fields">
+                    <div class="fg fg-dynamic">
+                        <input name="user-name" required type="text">
+                        <label>Ваше имя</label>
+                    </div>
+                    <div class="fg fg-dynamic">
+                        <input name="user-phone" required type="tel">
+                        <label>Номер телефона</label>
+                    </div>
+                    <div class="fg fg-dynamic">
+                        <input name="user-email" required type="email">
+                        <label>E-mail</label>
+                    </div>
+                </div>
+                <button class="modal-form__btn m-btn m-btn-blue">
+                    <span>Отправить заявку</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal thank-modal" id="thankModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <img src="img/thank.svg" alt="" class="thank-modal__icon">
+            <div class="thank-modal__title h2">
+                Спасибо!
+            </div>
+            <div class="thank-modal__desc">
+                <div class="text36 text20-tablet medium-text">
+                    Ваша заявка отправлена
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
